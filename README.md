@@ -6,7 +6,7 @@ ON dpt.numero_departamento = fun.numero_departamento
 GROUP BY dpt.nome_departamento;
 
   QUESTÃO 02:
-SELECT avg(func.salario) AS media_salario, fun.sexo
+SELECT avg(fun.salario) AS media_salario, fun.sexo
 FROM funcionario fun
 GROUP BY fun.sexo;
 
