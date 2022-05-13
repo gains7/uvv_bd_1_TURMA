@@ -1,4 +1,3 @@
-Pset2
 
 --QUESTÃO 01:
 SELECT avg(func.salario) AS media_salario, dpt.nome_departamento
