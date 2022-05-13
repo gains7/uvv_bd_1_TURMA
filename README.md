@@ -3,7 +3,7 @@ SELECT avg(fun.salario) AS media_salario, depart.nome_departamento
 FROM funcionario fun 
 INNER JOIN departamento depart 
 ON dpt.numero_departamento = fun.numero_departamento
-GROUP BY dpt.nome_departamento;
+GROUP BY depart.nome_departamento;
 
   QUESTÃO 02:
 SELECT avg(fun.salario) AS media_salario, fun.sexo
@@ -43,11 +43,11 @@ SELECT depart.nome_departamento,
        fun.data_nascimento,
        extract(year FROM age(current_date, func.data_nascimento)) AS idade,
        fun.salario,
-       ger.nome AS nome_gerente
+       geren.nome AS nome_gerente
 FROM departamento depart
 INNER JOIN funcionario fun 
 ON fun.numero_departamento = depart.numero_departamento
-INNER JOIN gerente ger ON ger.cpf = depart.cpf_gerente
+INNER JOIN gerente geren ON ger.cpf = depart.cpf_gerente
 ORDER BY depart.nome_departamento ASC, fun.salario DESC;
 
   QUESTÃO 06:
