@@ -1,5 +1,5 @@
   QUESTÃO 01:
-SELECT avg(func.salario) AS media_salario, depart.nome_departamento
+SELECT avg(fun.salario) AS media_salario, depart.nome_departamento
 FROM funcionario fun 
 INNER JOIN departamento depart 
 ON dpt.numero_departamento = fun.numero_departamento
